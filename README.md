@@ -11,3 +11,4 @@ Then load the `build/MaxiDump.dmp` mini dump file into `WinDbg` via `Ctrl + D`. 
 
 With Visual C++ 2019 it should look like this:
 
+![windbg-minidump](https://github.com/cristianadam/MaxiDump/blob/master/windbg-minidump.png)

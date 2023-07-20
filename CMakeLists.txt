@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.16)
+
+project(MaxiDump)
+
+add_executable(MaxiDump MaxiDump.cpp)
+target_link_libraries(MaxiDump PRIVATE dbghelp)
+
+if (MINGW AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    target_compile_options(MaxiDump PRIVATE -fms-extensions)
+    target_link_options(MaxiDump PRIVATE -Wl,--pdb=MaxiDump.pdb)
+endif()

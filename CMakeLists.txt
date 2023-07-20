@@ -9,3 +9,5 @@ if (MINGW AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     target_compile_options(MaxiDump PRIVATE -fms-extensions)
     target_link_options(MaxiDump PRIVATE -Wl,--pdb=MaxiDump.pdb)
 endif()
+
+add_custom_target(run COMMAND MaxiDump)
